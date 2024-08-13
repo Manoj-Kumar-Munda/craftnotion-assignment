@@ -1,9 +1,13 @@
 import React from "react";
+import { CgMenuMotion } from "react-icons/cg";
 import Avatar from "../assets/avatar.png";
 const Header = () => {
   return (
     <div className="header">
       <div>
+        <div className="menu-icon">
+            <CgMenuMotion size={32} style = {{ rotate: "270deg" }} />
+        </div>
         <h1 className="logo">Dexpress</h1>
       </div>
 
