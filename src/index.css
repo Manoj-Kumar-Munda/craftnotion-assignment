@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  font-size: 10px;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --font-primary: "rgb(61, 61, 78)";
+}
+
+body {
+  background-color: #fffcf7;
+}
+
+.body {
+  max-width: 1280px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 0.8rem;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.header {
+  padding-block: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+.header .logo {
+  font-size: 2.4rem;
+  font-style: normal;
+  color: var(--font-primary);
+  font-weight: 900;
+}
+
+.navbar .nav_list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.nav_list .nav_link {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--font-primary);
+}
+
+.nav_list .nav__item .avatar {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+}
+
+.main {
+  position: relative;
+  background-image: url("./src/assets/skate_boy.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+}
+.main .img {
+  display: none;
+}
+.hero-content {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-text {
+  font-weight: 800;
+  font-size: clamp(3.2rem, 5vw, 5.4rem);
+}
+.para {
+  margin-left: 1rem;
+  font-size: 1.8rem;
+  color: lightslategray;
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+
+.order {
+  position: relative;
+  margin-top: 3.2rem;
+  margin-left: 1rem;
+}
+
+.order::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #e7720b;
+  top: -55%;
+  left: -3%;
+  height: 6.4rem;
+  width: 6.4rem;
+  border-radius: 50%;
+}
+
+.order .order-text {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.product-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding-top: 3rem;
+  padding-right: 8%;
+}
+
+.product__desc__item {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+}
+
+.product__desc__item .icon {
+  background-color: #e7720b;
+  border-radius: 1.6rem;
+  width: 5.2rem;
+  height: 5.2rem;
+  display: grid;
+  place-content: center;
+  color: var(--font-primary);
+}
+
+.desc__text h1 {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.desc__text p {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.footer {
+  display: flex;
+  padding-block: 1rem;
+  justify-content: space-between;
+}
+
+.footer-content {
+  display: flex;
+  width: min-content;
+  flex-direction: column;
+  gap: 1.4rem;
+  color: var(--font-primary);
+}
+
+.footer-content h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-wrap: nowrap;
+}
+
+.footer-content > p:first-of-type {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: lightslategray;
+}
+.footer-content .description {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: lightslategray;
+  text-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding-block: 1.8rem;
+  }
+  .nav_list .nav_link {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+  .main {
+    background-image: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+  .main .hero-content {
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .main .product-desc {
+    display: none;
+  }
+
+  .main .img {
+    display: block;
+  }
+  .main .img img {
+    width: 100%;
+    max-width: 360px;
+    object-fit: cover;
+  }
+
+  .hero-content .hero-text {
+    text-align: center;
+  }
+}
