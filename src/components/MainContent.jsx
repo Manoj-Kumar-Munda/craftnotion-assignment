@@ -7,7 +7,7 @@ const MainContent = () => {
   return (
     <div className="main">
       <div className="img">
-        <img src={heroImg} height={300} alt="hero" />
+        <img src={heroImg}  alt="hero" />
       </div>
       <div className="hero-content">
         <h1 className="hero-text">
